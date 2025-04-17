@@ -2,12 +2,14 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app =express()
-app.use(cors())
+app.use(cors({
+    origin: 'https://to-do-list-app-mu-ivory.vercel.app'
+}))
 
 app.use(express.json())
 
 // connecting to the database
-mongoose.connect('mongodb+srv://ciilanesalaad482561:nt0yxzgxaiKB9g9S@todolist.djkffz5.mongodb.net/?retryWrites=true&w=majority&appName=ToDoList/task').then(()=>{
+mongoose.connect('mongodb+srv://ciilanesalaad482561:nt0yxzgxaiKB9g9S{@todolist.djkffz5.mongodb.net/?retryWrites=true&w=majority&appName=ToDoList/task').then(()=>{
     console.log("the server is connected to the database successfully!")
 }).catch((error)=>{
 console.log(error)
