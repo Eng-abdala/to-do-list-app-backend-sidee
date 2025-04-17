@@ -7,7 +7,7 @@ app.use(cors())
 app.use(express.json())
 
 // connecting to the database
-mongoose.connect('mongodb://localhost:27017/task').then(()=>{
+mongoose.connect('mongodb+srv://ciilanesalaad482561:nt0yxzgxaiKB9g9S@todolist.djkffz5.mongodb.net/?retryWrites=true&w=majority&appName=ToDoList/task').then(()=>{
     console.log("the server is connected to the database successfully!")
 }).catch((error)=>{
 console.log(error)
